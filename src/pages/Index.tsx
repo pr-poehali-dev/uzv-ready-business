@@ -33,7 +33,7 @@ const fishSolutions: FishSolution[] = [
     payback: '18-24 месяца',
     risk: 'Низкий',
     profit: 'Очень высокий',
-    image: '/img/325d6147-53fd-43af-b148-bc313ecb9490.jpg'
+    image: '/img/6e77930c-e37c-44fc-99ec-7050abe903bd.jpg'
   },
   {
     id: 'trout',
@@ -45,7 +45,7 @@ const fishSolutions: FishSolution[] = [
     payback: '12-15 месяцев',
     risk: 'Очень низкий',
     profit: 'Высокий',
-    image: '/img/164d1e97-0985-4147-a161-9535b9f8d46f.jpg'
+    image: '/img/427c543b-1ed7-4734-98cf-9c5ed501da09.jpg'
   },
   {
     id: 'catfish',
@@ -57,7 +57,7 @@ const fishSolutions: FishSolution[] = [
     payback: '8-12 месяцев',
     risk: 'Средний',
     profit: 'Средний/высокий',
-    image: '/img/fc7ee23e-b84d-44c3-a0d3-0d72876b37c9.jpg'
+    image: '/img/a26bc82c-35d7-4e67-8fd6-4188cdd45141.jpg'
   }
 ];
 
@@ -136,7 +136,7 @@ function Index() {
             </div>
             <div className="relative">
               <img 
-                src="/img/fc7ee23e-b84d-44c3-a0d3-0d72876b37c9.jpg" 
+                src="/img/6e77930c-e37c-44fc-99ec-7050abe903bd.jpg" 
                 alt="УЗВ оборудование" 
                 className="rounded-lg shadow-2xl w-full h-[400px] object-cover"
               />
@@ -327,7 +327,9 @@ function Index() {
 
                   <div className="flex gap-2 mb-6">
                     <Button className="flex-1 bg-primary hover:bg-primary/90" size="sm">
-                      Рассчитать доходность
+                      {solution.id === 'sturgeon' ? 'Рассчитать доходность проекта' : 
+                       solution.id === 'trout' ? 'Получить бизнес-план по форели' : 
+                       'Заказать расчёт'}
                     </Button>
                     <Button variant="outline" size="sm">
                       Подробнее
@@ -336,6 +338,127 @@ function Index() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Success Cases */}
+      <section className="py-16 bg-gray-50">
+        <div className="container max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-4">Истории успеха наших клиентов</h2>
+            <p className="text-lg text-muted-foreground">Реальные результаты тех, кто уже запустил УЗВ бизнес</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="overflow-hidden">
+              <div className="relative h-48">
+                <img 
+                  src="/img/6e77930c-e37c-44fc-99ec-7050abe903bd.jpg" 
+                  alt="Осетровая ферма"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="font-bold text-lg">Ферма "АкваПремиум"</h3>
+                  <p className="text-sm">Осетровое хозяйство</p>
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <div className="mb-4">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-sm text-muted-foreground">Инвестиции:</span>
+                    <span className="font-semibold">8 млн ₽</span>
+                  </div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-sm text-muted-foreground">Срок окупаемости:</span>
+                    <span className="font-semibold text-green-600">16 месяцев</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">Годовая прибыль:</span>
+                    <span className="font-semibold text-primary">4.2 млн ₽</span>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4">
+                  "Благодаря профессиональному подходу команды УЗВ Инвест, мы запустили ферму в рекордные сроки и уже получаем стабильную прибыль."
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden">
+              <div className="relative h-48">
+                <img 
+                  src="/img/427c543b-1ed7-4734-98cf-9c5ed501da09.jpg" 
+                  alt="Форелевая ферма"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="font-bold text-lg">ООО "АльпинФиш"</h3>
+                  <p className="text-sm">Форелевое хозяйство</p>
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <div className="mb-4">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-sm text-muted-foreground">Инвестиции:</span>
+                    <span className="font-semibold">3.5 млн ₽</span>
+                  </div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-sm text-muted-foreground">Срок окупаемости:</span>
+                    <span className="font-semibold text-green-600">13 месяцев</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">Годовая прибыль:</span>
+                    <span className="font-semibold text-primary">1.8 млн ₽</span>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4">
+                  "Форель - идеальный выбор для начинающих. Стабильный спрос и предсказуемая прибыль. Рекомендуем!"
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden">
+              <div className="relative h-48">
+                <img 
+                  src="/img/a26bc82c-35d7-4e67-8fd6-4188cdd45141.jpg" 
+                  alt="Ферма сома"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="font-bold text-lg">"РегионАква"</h3>
+                  <p className="text-sm">Выращивание сома</p>
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <div className="mb-4">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-sm text-muted-foreground">Инвестиции:</span>
+                    <span className="font-semibold">2.2 млн ₽</span>
+                  </div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-sm text-muted-foreground">Срок окупаемости:</span>
+                    <span className="font-semibold text-green-600">10 месяцев</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">Годовая прибыль:</span>
+                    <span className="font-semibold text-primary">1.1 млн ₽</span>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4">
+                  "Быстрый запуск и минимальные риски - именно то, что нужно для входа в бизнес. Очень довольны результатом!"
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              <Icon name="Eye" size={20} className="mr-2" />
+              Посмотреть больше кейсов
+            </Button>
           </div>
         </div>
       </section>
